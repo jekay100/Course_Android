@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.study.demo"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="android.study.demo.AndroidDemoApplication"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name="android.study.demo.LauncherActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.helloworld.HelloWorld"
+            android:label="@string/lesson2_helloworld" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.helloworld.AssetsAndRawActivity"
+            android:label="@string/lesson2_AssetsAndRaw" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.StartNewActivity"
+            android:label="@string/lesson4_StartNewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.NewActivity"
+            android:label="NewActivity" >
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.FirstActivity"
+            android:label="@string/lesson4_ActivityTransfer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.LifecycleActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/lesson4_LifecycleActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.SecondActivity"
+            android:label="SecondActivity" >
+        </activity>
+        <activity
+            android:name="android.study.demo.activityandintent.ThirdActivity"
+            android:label="ThirdActivity"
+            android:theme="@style/Theme.FloatActivity" >
+        </activity>
+        <activity
+            android:name="android.study.demo.service.MusicServiceActivity"
+            android:label="@string/lesson5_MusicServiceActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.service.BeginServiceActivity"
+            android:label="@string/lesson5_BeginServiceActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.BaseDialogActivity"
+            android:label="@string/lesson6_BaseDialogActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.ViewActivity"
+            android:label="@string/lesson6_ViewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.SundyListActivity"
+            android:label="@string/lesson6_SundyListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.MyLayoutActivity"
+            android:label="@string/lesson6_MyLayoutActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.MyGridViewActivity"
+            android:label="@string/lesson6_MyGridViewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.FullScreenGallery"
+            android:label="@string/lesson6_FullScreenGalleryActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.FormWidgetActivity"
+            android:label="@string/lesson6_FormWidgetActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.StyleActivity"
+            android:label="@string/lesson6_StyleActivity"
+            android:theme="@style/SundyTheme.Red" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.MyGalleryActivity"
+            android:label="@string/lesson6_MyGalleryActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.NotificationSampleActivity"
+            android:label="@string/lesson6_NotificationSampleActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.MyDrawerActivity"
+            android:label="@string/lesson6_MyDrawerActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.ViewGroupActivity"
+            android:label="@string/lesson6_ViewGroupActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uibase.MyListViewActivity"
+            android:label="@string/lesson6_MyListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.datastore.SharePreferenceDemo"
+            android:label="@string/lesson7_SharePreferenceDemo"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.datastore.FileOperationDemo"
+            android:label="@string/lesson7_FileOperationDemo"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.datastore.SQLiteDemo"
+            android:label="@string/lesson7_SQLiteDemo"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.datastore.NetworkDemo"
+            android:label="@string/lesson7_NetworkDemo"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.contentprovider.ContentResolverActivity"
+            android:label="@string/lesson8_ContentResolver"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.broadcastreceiver.SendBroadcastActivity"
+            android:label="@string/lesson9_SendBroadcast"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.multimedia.AudioHelloworld"
+            android:label="@string/multimedia_audiohelloworld"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.java4android.InstanceofActivity"
+            android:label="@string/java4android_instanceof"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.java4android.InterationActivity"
+            android:label="@string/java4android_interationactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.java4android.InnerClassAdvActivity"
+            android:label="@string/java4android_innerclassadv"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.java4android.GenericActivity"
+            android:label="@string/java4android_genericactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.java4android.ThreadActivity"
+            android:label="@string/java4android_threadactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!-- for stage3 async operation -->
+        <activity
+            android:name="android.study.demo.async.WholeAsyncActivity"
+            android:label="@string/process_wholeasync" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.async.ProcessLifecycleActivity"
+            android:label="@string/process_lifecycle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.async.ThreadConceptActivity"
+            android:label="@string/process_threadconcept" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.async.HandlerConceptActivity"
+            android:label="@string/process_handlerconcept" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.async.AsyncTaskTestActivity"
+            android:label="@string/process_asynctask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.gesture.GestureShow1Activity"
+            android:label="@string/gesture_gestureshow1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.gesture.GestureCreateActivity"
+            android:label="gesture_create" />
+        <activity
+            android:name="android.study.demo.gesture.GestureShow2Activity"
+            android:label="@string/gesture_gestureshow2" >
+        </activity>
+        <activity
+            android:name="android.study.demo.gesture.GestureShow3Activity"
+            android:label="@string/gesture_gestureshow3" >
+        </activity>
+        <activity
+            android:name="android.study.demo.gesture.GestureShow4Activity"
+            android:label="@string/gesture_gestureshow4" >
+        </activity>
+        <activity
+            android:name="android.study.demo.sensor.ActivityMainList"
+            android:label="@string/sensor_activitymainlist" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.sensor.ActivityMain"
+            android:label="@string/sensor_activitymain" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.sensor.ActivityMain2"
+            android:label="@string/sensor_activitymain2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.sensor.ActivitySensorShow"
+            android:label="@string/sensor_sensorshow" />
+        <activity
+            android:name="android.study.demo.sensor.CompassDemo"
+            android:label="@string/sensor_compassdemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.sensor.SensorPlayerActivity"
+            android:label="@string/sensor_playeractivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.maplocation.MyMapActivity"
+            android:label="@string/maplocation_mymap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.graphic.HelloGameItemControlActivity"
+            android:label="@string/graphic_HelloGameItemControlActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.graphic.DrawableResourceActivity"
+            android:label="@string/graphic_drawableresource" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.graphic.DrawableResourceXMLActivity"
+            android:label="@string/graphic_drawableresourcexml" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.graphic.CustomDrawableActivity"
+            android:label="@string/graphic_customdrawable" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.maplocation.GeoDemoActivity"
+            android:label="@string/maplocation_geodemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.sqlite.UserManagerActivity"
+            android:label="@string/sqlite_usermanager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.widget.ShortcutActivity"
+            android:label="@string/widget_shortcut" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="sundymeta"
+                android:value="Sundy&apos;s Meta-data = Today Shortcut" />
+        </activity>
+        <activity
+            android:name="android.study.demo.contentprovider.ContactContractActivity"
+            android:label="@string/contentprovider_contactcontract" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- start advance UI -->
+        <activity
+            android:name="android.study.demo.uiadv.style.StyleActivity"
+            android:label="@string/style_simple" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.Rotate3DActivity"
+            android:label="@string/animation_rotate3d"
+            android:windowAnimationStyle="@style/Rotate3DActivityAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.style.BubbleThemeActivity"
+            android:label="@string/style_bubbletheme"
+            android:theme="@style/MyBubbleTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.style.BlurThemeActivity"
+            android:label="@string/style_blurtheme"
+            android:theme="@style/MyBubbleTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.skin.ThemeSkinActivity"
+            android:label="@string/skin_themeskin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.skin.LayoutSkinActivity"
+            android:label="@string/skin_layoutskin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.performance.DelayLoadActivity"
+            android:label="@string/performance_delayload" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.performance.FastSwitchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/performance_fastswitch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.AnimationActivity"
+            android:label="@string/animation_simpleanimation"
+            android:theme="@style/ThemeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.shake_desk.ShakeDesktopActivity"
+            android:label="@string/advui_shakedesk"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.FadeAnimationActivity"
+            android:label="@string/animation_fadeanimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.BaseTweenAnimationActivity"
+            android:label="@string/animation_basetweenanimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.BaseFrameAnimation"
+            android:label="@string/animation_baseframeanimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.SimpleDragSample"
+            android:label="@string/animation_simpledragsample" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.study.demo.uiadv.animation.ViewFlipperActivity"
+            android:label="@string/animation_viewflipper" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- end advance UI -->
+
+        <activity
+            android:name="android.study.demo.widget.MetaDataActivity"
+            android:label="@string/widget_metadata" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="sundy.android.demo.widget.metaactivity"
+                android:value="Sundy&apos;s MeataData" />
+        </activity>
+
+        <service android:name="android.study.demo.service.BeginService" />
+        <service android:name="android.study.demo.service.BeginIntentService" />
+        <service android:name="android.study.demo.service.MusicService" />
+
+        <receiver android:name="android.study.demo.broadcastreceiver.MyBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="sundy.android.demo.HiMessage" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="android.study.demo.broadcastreceiver.SMSReceiver" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="android.study.demo.widget.SimpleWidgetDemo" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/simplewidget_provider" >
+            </meta-data>
+        </receiver>
+
+        <provider
+            android:name="android.study.demo.contentprovider.CustomProvider"
+            android:authorities="sundy.android.demo.provider" >
+        </provider>
+    </application>
+
+    <uses-sdk android:minSdkVersion="3" />
+
+</manifest>
